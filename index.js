@@ -234,8 +234,26 @@ CuboidMaker.prototype.surfaceArea = function () {
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
-class CuboidMakerTwo {}
+class CuboidMakerTwo {
+  constructor(atr) {
+    this.length = atr.length;
+    this.width = atr.width;
+    this.height = atr.height;
+  }
+  surfaceArea() {
+    return (
+      2 *
+      (this.length * this.width +
+        this.length * this.height +
+        this.width * this.height)
+    );
+  }
 
+  volume() {
+    return this.length * this.width * this.height;
+  }
+}
+//pasted from above
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
 // console.log(cuboidTwo.volume()); // 100
 // console.log(cuboidTwo.surfaceArea()); // 130
